@@ -1,6 +1,34 @@
-# Real Estate App
+# Unilodge Real Estate WebApp
+
+This is a Webapp for Unilodge Property Developers written using a NodeJs/Express backend and a Vite frontend in React. 
+It uses Google Auth authentication as well as an email/password combination. It employs the use of MongoDB as the database.
+Google Storage is used for storage of images. The frontend makes use of Tailwind CSS and is responsive across devices.
 
 The Unilodge Real Estate App is a web application that provides a platform for users to view and book properties for inspection. It also offers administrative functionalities for managing users and properties, while managers can oversee both properties and users effectively.
+
+## Functionalities in brief:
+The following are basic functionalities involved:
+Basics:
+1. App allows users create accounts
+2. App allows users see properties (houses or lands) for sale or rent
+3. App allows users book and pay for inspection
+4. App allows users bookmark houses for viewing later
+
+Admins and Managers:
+1. Three categories of users - Admins, Managers, User
+2. Admins can perform all actions - including creating and deleting property, users, bookings and payments and adjusting access levels
+3.  Managers can do same except delete users or change access level
+4.  Regular can only view, book inspection and update own profile
+
+Properties:
+1. Properties will be either houses or lands
+2. They belong to either sell or rent categories
+
+Single property page:
+1. View details of house including pictures
+2. Have a button with link to view view of property on youtube or instagram
+3. Booking section appears below each property to allow for easy booking
+
 
 ## Features
 
@@ -106,11 +134,4 @@ The Unilodge Real Estate App is a web application that provides a platform for u
 
 - Francis Ihejirika (Fullstack Developer)
 
-## License
-
-This project is licensed under the XYZ License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Special thanks to Sahand Ghavidel, Code with Dawid and John Smilga for helpful references
 
