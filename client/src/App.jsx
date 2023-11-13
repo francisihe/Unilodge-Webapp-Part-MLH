@@ -7,6 +7,9 @@ import Profile from './pages/Profile'
 import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
 import Footer from './components/UI/Footer'
+import AddProperty from './pages/AddProperty'
+import PropertyListing from './components/UIskeleton/PropertyListing'
+
 
 function App() {
 
@@ -19,6 +22,8 @@ function App() {
           <Route path='/profile' element={<Profile />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/signin' element={<SignIn />} />
+          <Route path='/add-property' element={<AddProperty />} />
+          <Route path='/property/:id' element={<PropertyListing />} />
         </Route>
       </Routes>
       <Footer />
