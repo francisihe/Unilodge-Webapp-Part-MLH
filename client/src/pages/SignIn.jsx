@@ -42,15 +42,13 @@ const SignIn = () => {
         body: JSON.stringify(formData),
       });
       const data = await res.json();
+      console.log(data);
 
       if (data.success === false) {
-        setLoading(false);
-        setError(data.message);
         dispatch(signInFailure(data.message));
         return;
       }
-      setLoading(false);
-      setError(null);
+
       dispatch(signInSuccess(data));
       navigate('/profile');
 

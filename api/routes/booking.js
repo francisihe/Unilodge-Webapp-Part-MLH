@@ -1,7 +1,7 @@
 import express from 'express';
 import {
     createBooking, getUserBookings, getUserBookingsById,
-    getAllBookings, getBooking, updateBooking, deleteBooking
+    getAllBookings, getBooking, updateBooking, deleteBooking, searchBookings
 } from '../controllers/bookingController.js';
 import { verifyManagerOrAdmin } from "../middlewares/verifyManagerOrAdmin.js"
 import { verifyUser } from '../middlewares/verifyUser.js';
@@ -26,16 +26,13 @@ router.route('/:bookingId/users/:userId')
 router.route('/all')
     .get(verifyManagerOrAdmin, getAllBookings)
 
+router.route('/search')
+    .get(verifyManagerOrAdmin, searchBookings);
+
 //Get a booking by booking id as admin or manager
 router.route('/:bookingId')
     .get(verifyManagerOrAdmin, getBooking)
-
-//Update a booking by booking id as admin or manager
-router.route('/:bookingId')
     .patch(verifyManagerOrAdmin, updateBooking)
-
-//Delete a booking by booking id as admin or manager
-router.route('/:bookingId')
     .delete(verifyManagerOrAdmin, deleteBooking)
 
 export default router;
